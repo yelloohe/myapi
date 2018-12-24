@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.dao.EsMemberMapper">
+  <resultMap id="BaseResultMap" type="com.project.model.EsMember">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="member_id" jdbcType="INTEGER" property="memberId" />
+    <result column="agentid" jdbcType="INTEGER" property="agentid" />
+    <result column="parentid" jdbcType="INTEGER" property="parentid" />
+    <result column="lv_id" jdbcType="INTEGER" property="lvId" />
+    <result column="uname" jdbcType="VARCHAR" property="uname" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="regtime" jdbcType="BIGINT" property="regtime" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="birthday" jdbcType="BIGINT" property="birthday" />
+    <result column="advance" jdbcType="DECIMAL" property="advance" />
+    <result column="province_id" jdbcType="INTEGER" property="provinceId" />
+    <result column="city_id" jdbcType="INTEGER" property="cityId" />
+    <result column="region_id" jdbcType="INTEGER" property="regionId" />
+    <result column="town_id" jdbcType="INTEGER" property="townId" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="region" jdbcType="VARCHAR" property="region" />
+    <result column="town" jdbcType="VARCHAR" property="town" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="zip" jdbcType="VARCHAR" property="zip" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="tel" jdbcType="VARCHAR" property="tel" />
+    <result column="point" jdbcType="INTEGER" property="point" />
+    <result column="mp" jdbcType="INTEGER" property="mp" />
+    <result column="QQ" jdbcType="VARCHAR" property="qq" />
+    <result column="msn" jdbcType="VARCHAR" property="msn" />
+    <result column="lastlogin" jdbcType="BIGINT" property="lastlogin" />
+    <result column="is_agent" jdbcType="INTEGER" property="isAgent" />
+    <result column="logincount" jdbcType="INTEGER" property="logincount" />
+    <result column="is_cheked" jdbcType="INTEGER" property="isCheked" />
+    <result column="registerip" jdbcType="VARCHAR" property="registerip" />
+    <result column="recommend_point_state" jdbcType="INTEGER" property="recommendPointState" />
+    <result column="last_send_email" jdbcType="INTEGER" property="lastSendEmail" />
+    <result column="info_full" jdbcType="INTEGER" property="infoFull" />
+    <result column="find_code" jdbcType="VARCHAR" property="findCode" />
+    <result column="face" jdbcType="VARCHAR" property="face" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="midentity" jdbcType="INTEGER" property="midentity" />
+    <result column="disabled" jdbcType="SMALLINT" property="disabled" />
+    <result column="remark" jdbcType="LONGVARCHAR" property="remark" />
+  </resultMap>
+  
+  
+  <select id="queryYhByYhAndUname" resultMap="BaseResultMap" >
+    select * from es_member
+    where  uname = #{uname} and name = #{name}   
+  </select>
+  
+</mapper>
