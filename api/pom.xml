@@ -45,11 +45,17 @@
 		
 		<!-- 自己的工具库  -->
 		 
-		 <dependency>
+		<!--  <dependency>
             <groupId>com.hh.utils</groupId>
             <artifactId>hh-utils</artifactId>
             <version>1.0.1</version>
-        </dependency>
+        </dependency> -->
+        
+        <dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-lang3</artifactId>
+	    <version>3.7</version>    
+		</dependency>
         
 		 <!--常用库依赖-->
 		 <dependency>
